@@ -1,0 +1,221 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{85CF2EEF-B201-4670-9D14-C276D32FDC19}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Energiehaus_mewes</RootNamespace>
+    <AssemblyName>Energiehaus_mewes</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="content\Aquarium.html" />
+    <Content Include="content\Beleuchtung.html" />
+    <Content Include="content\css\style_box.css" />
+    <Content Include="content\Daemmung_Dach.html" />
+    <Content Include="content\Daemmung_Wand.html" />
+    <Content Include="content\Erdgas.html" />
+    <Content Include="content\Erdgasauto.html" />
+    <Content Include="content\Erdgasheizung.html" />
+    <Content Include="content\Fernwaerme.html" />
+    <Content Include="content\Heizflaechen.html" />
+    <Content Include="content\Kaffeemaschiene.html" />
+    <Content Include="content\Kochen.html" />
+    <Content Include="content\Kuehlen.html" />
+    <Content Include="content\Oekostrom.html" />
+    <Content Include="content\Photovoltaik.html" />
+    <Content Include="content\pics\aquarium.png" />
+    <Content Include="content\pics\beleuchtung.png" />
+    <Content Include="content\pics\erdgas.png" />
+    <Content Include="content\pics\erdgasheizung.png" />
+    <Content Include="content\pics\erdgasheizung_warmwasserbereitung.png" />
+    <Content Include="content\pics\erdgas_elektroauto.png" />
+    <Content Include="content\pics\fernwaerme.png" />
+    <Content Include="content\pics\heizflaechen.png" />
+    <Content Include="content\pics\kaffeemaschine.png" />
+    <Content Include="content\pics\kochen.png" />
+    <Content Include="content\pics\kuehlen_gefrieren.png" />
+    <Content Include="content\pics\oekostrom.png" />
+    <Content Include="content\pics\photovoltaik.png" />
+    <Content Include="content\pics\schimmel.png" />
+    <Content Include="content\pics\solarthermie.png" />
+    <Content Include="content\pics\thermografie.png" />
+    <Content Include="content\pics\trinkwasser.png" />
+    <Content Include="content\pics\trinkwasser_energie.png" />
+    <Content Include="content\pics\unterhaltungselektronik.png" />
+    <Content Include="content\pics\waermepumpe.png" />
+    <Content Include="content\pics\waermeschutzverglasung.png" />
+    <Content Include="content\pics\warmedaemmung_an_aussenwaenden.png" />
+    <Content Include="content\pics\warmedaemmung_im_dachgeschoss.png" />
+    <Content Include="content\pics\waschen_trocknen.png" />
+    <Content Include="content\pics\wohnraumbelueftung.png" />
+    <Content Include="content\pics\zaehler.png" />
+    <Content Include="content\Schimmel.html" />
+    <Content Include="content\Solarthermie.html" />
+    <Content Include="content\Thermografie.html" />
+    <Content Include="content\Trinkwasser1.html" />
+    <Content Include="content\Trinkwasser2.html" />
+    <Content Include="content\Unterhaltungselektronik.html" />
+    <Content Include="content\Waermepumpe.html" />
+    <Content Include="content\Waermeschutzverglasung.html" />
+    <Content Include="content\Warmwasser.html" />
+    <Content Include="content\Waschen.html" />
+    <Content Include="content\Wohnungsraumbelueftung.html" />
+    <Content Include="content\Zaehler.html" />
+    <Content Include="images\Energiehaus_Bild.jpg" />
+    <Content Include="images\Haus_alt.jpg" />
+    <Content Include="Impressum.html" />
+    <Content Include="index.html" />
+    <Content Include="js\FancyBox\ajax.txt" />
+    <Content Include="js\FancyBox\example\10_b.jpg" />
+    <Content Include="js\FancyBox\example\10_s.jpg" />
+    <Content Include="js\FancyBox\example\11_b.jpg" />
+    <Content Include="js\FancyBox\example\11_s.jpg" />
+    <Content Include="js\FancyBox\example\12_b.jpg" />
+    <Content Include="js\FancyBox\example\12_s.jpg" />
+    <Content Include="js\FancyBox\example\1_b.jpg" />
+    <Content Include="js\FancyBox\example\1_s.jpg" />
+    <Content Include="js\FancyBox\example\2_b.jpg" />
+    <Content Include="js\FancyBox\example\2_s.jpg" />
+    <Content Include="js\FancyBox\example\3_b.jpg" />
+    <Content Include="js\FancyBox\example\3_s.jpg" />
+    <Content Include="js\FancyBox\example\4_b.jpg" />
+    <Content Include="js\FancyBox\example\4_s.jpg" />
+    <Content Include="js\FancyBox\example\5_b.jpg" />
+    <Content Include="js\FancyBox\example\5_s.jpg" />
+    <Content Include="js\FancyBox\example\6_b.jpg" />
+    <Content Include="js\FancyBox\example\6_s.jpg" />
+    <Content Include="js\FancyBox\example\7_b.jpg" />
+    <Content Include="js\FancyBox\example\7_s.jpg" />
+    <Content Include="js\FancyBox\example\8_b.jpg" />
+    <Content Include="js\FancyBox\example\8_s.jpg" />
+    <Content Include="js\FancyBox\example\9_b.jpg" />
+    <Content Include="js\FancyBox\example\9_s.jpg" />
+    <Content Include="js\FancyBox\fancybox\blank.gif" />
+    <Content Include="js\FancyBox\fancybox\fancybox-x.png" />
+    <Content Include="js\FancyBox\fancybox\fancybox-y.png" />
+    <Content Include="js\FancyBox\fancybox\fancybox.png" />
+    <Content Include="js\FancyBox\fancybox\fancy_close.png" />
+    <Content Include="js\FancyBox\fancybox\fancy_loading.png" />
+    <Content Include="js\FancyBox\fancybox\fancy_nav_left.png" />
+    <Content Include="js\FancyBox\fancybox\fancy_nav_right.png" />
+    <Content Include="js\FancyBox\fancybox\fancy_shadow_e.png" />
+    <Content Include="js\FancyBox\fancybox\fancy_shadow_n.png" />
+    <Content Include="js\FancyBox\fancybox\fancy_shadow_ne.png" />
+    <Content Include="js\FancyBox\fancybox\fancy_shadow_nw.png" />
+    <Content Include="js\FancyBox\fancybox\fancy_shadow_s.png" />
+    <Content Include="js\FancyBox\fancybox\fancy_shadow_se.png" />
+    <Content Include="js\FancyBox\fancybox\fancy_shadow_sw.png" />
+    <Content Include="js\FancyBox\fancybox\fancy_shadow_w.png" />
+    <Content Include="js\FancyBox\fancybox\fancy_title_left.png" />
+    <Content Include="js\FancyBox\fancybox\fancy_title_main.png" />
+    <Content Include="js\FancyBox\fancybox\fancy_title_over.png" />
+    <Content Include="js\FancyBox\fancybox\fancy_title_right.png" />
+    <Content Include="js\FancyBox\fancybox\jquery.easing-1.3.pack.js" />
+    <Content Include="js\FancyBox\fancybox\jquery.fancybox-1.3.4.css" />
+    <Content Include="js\FancyBox\fancybox\jquery.fancybox-1.3.4.js" />
+    <Content Include="js\FancyBox\fancybox\jquery.fancybox-1.3.4.pack.js" />
+    <Content Include="js\FancyBox\fancybox\jquery.mousewheel-3.0.4.pack.js" />
+    <Content Include="js\FancyBox\index.html" />
+    <Content Include="js\FancyBox\jquery-1.4.3.min.js" />
+    <Content Include="js\FancyBox\style.css" />
+    <Content Include="js\jquery-1.11.1.js" />
+    <Content Include="js\jquery-migrate-1.2.1.js" />
+    <Content Include="js\jquery.imagemapster.1.2.5b25.js" />
+    <Content Include="js\jquery.min.js" />
+    <Content Include="Style.css" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>54281</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:54281/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

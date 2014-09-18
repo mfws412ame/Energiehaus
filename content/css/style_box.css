@@ -1,0 +1,14 @@
+﻿body {
+    width: 750px;
+}
+
+#container_pic{
+    
+    float: right;
+}
+
+#container_text{
+    width: 350px;
+    float: left;
+    
+}

@@ -1,0 +1,24 @@
+﻿body {
+}
+
+#Energiehaus {
+    width: 1024px;
+}
+
+#image_container{
+    position: relative;
+    display: inline-block;
+
+}
+
+#backButton{
+    position: absolute;
+    border-radius: 15px;
+    background-color:#7ab51d;
+    top:2%;
+    left:2%;
+}
+
+#impressum{
+    float:none;
+}

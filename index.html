@@ -1,0 +1,216 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Energiehaus</title>
+    <link href="Style.css" rel="stylesheet" />
+
+    <script src="js/jquery-1.11.1.js"></script>   
+    <script src="js/jquery-migrate-1.2.1.js"></script>
+
+    <script src="js/jquery.imagemapster.1.2.5b25.js"></script>
+
+
+    <script src="js/FancyBox/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+    <link href="js/FancyBox/fancybox/jquery.fancybox-1.3.4.css" rel="stylesheet" />
+
+    
+
+    <script>
+
+        
+        
+        $(document).ready(function () {
+
+            
+            // setting mapster
+            $('#Energiehaus').mapster({
+                mapKey: 'data-area',
+                fillColor: 'ffff00',
+                fillOpacity: 0.3,
+                stroke: true,
+                strokeColor: 'ffffff',
+                render_select: {
+                    fillColor: '000000',
+                    stroke: false,
+                    altImage: 'images/Haus_alt.jpg'
+                },
+            });
+
+
+            $('#Energiehaus').mapster('resize', 1024, 0, 0);
+
+
+        
+
+            // onclick for rooms
+
+            document.getElementById("roof").addEventListener("click", function () {
+                zoom_area("roof");
+            }, false);
+            document.getElementById("loft").addEventListener("click", function () {
+                zoom_area("loft");
+            }, false);
+            document.getElementById("wall1").addEventListener("click", function () {
+                zoom_area("wall1");
+            }, false);
+            document.getElementById("bathroom").addEventListener("click", function () {
+                zoom_area("bathroom");
+            }, false);
+            document.getElementById("wall2").addEventListener("click", function () {
+                zoom_area("wall2");
+            }, false);
+
+            document.getElementById("kitchen").addEventListener("click", function () {
+                zoom_area("kitchen");
+            }, false);
+            document.getElementById("livingroom").addEventListener("click", function () {
+                zoom_area("livingroom");
+            }, false);
+            document.getElementById("cellar1").addEventListener("click", function () {
+                zoom_area("cellar1");
+            }, false);
+            document.getElementById("cellar2").addEventListener("click", function () {
+                zoom_area("cellar2");
+            }, false); 
+            document.getElementById("car").addEventListener("click", function () {
+                zoom_area("car");
+            }, false);
+
+            document.getElementById("pipes").addEventListener("click", function () {
+                zoom_area("pipes");
+            }, false);
+
+            // onclick for rooms done
+
+
+
+            // onclick for back button
+            document.getElementById("backButton").addEventListener("click", function () {
+                window.location.reload();
+                document.getElementById("backButton").style.visibility = "hidden";
+            }, false);
+
+
+
+            // activate fancybox
+            $(".fancybox").fancybox({
+                'height': '370',
+                'width':'750',
+                'autoDimensions':false,
+                'autoSize':false
+            });
+        });
+        
+
+
+        function zoom_area(cKey) {
+
+            // set variables
+            var key = cKey;
+            var zoomOpts = { padding: 60, duration: 500, force: true, scroll: true };
+            var key_p = cKey + "_p";
+      
+            // zoom function for the rooms
+            $('#Energiehaus').mapster('zoom', key, zoomOpts);
+            
+            // disables scroll bars on the image
+            document.getElementById("mapster_wrap_0").style.overflow = "hidden";
+            
+
+            setTimeout(function () {
+                // makes the buttons visable with an altImage (mapster function)
+                $('#Energiehaus').mapster('set', true, key_p, { stroke: false, altImage: 'images/Haus_alt.jpg' });
+                document.getElementById("backButton").style.visibility = "visible";
+            }, 500);
+
+            // disables all front areas so that the buttons are clickable (detach from DOM)
+             $('.front').detach();   
+
+        }
+
+        
+    </script>
+
+</head>
+<body>
+
+
+    <map id="Energiehaus_map" name="Energiehaus_map">
+
+        <!--  room areas div  -->
+
+        <area id="roof"     class="front" shape="poly" alt="" title="" data-area="roof,room" coords="1076,46,1587,200,1496,318,1269,240,929,588,630,491,720,400,719,194,627,255,624,251,720,167,719,156,687,144,690,137,744,140,731,115,739,-4,745,-1,748,140,762,146,768,150,769,158,843,235,846,248,753,170,736,163,731,175,730,389,1075,46" href="#" target="" />
+        <area id="loft"     class=" front" shape="poly" alt="" title="" data-area="loft,room" coords="1595,233,1517,335,1288,258,1009,548,1232,622,1896,407" href="#" target="" />
+        <area id="wall1"    class="front" shape="poly" alt="" title="" data-area="wall1,room" coords="1589,823,1897,720,1896,428,1586,528" href="#" target="" />
+        <area id="bathroom" class="front" shape="poly" alt="" title="" data-area="bathroom,room" coords="1231,939,1589,822,1587,525,1231,643,996,563,958,601,959,850" href="#" target="" />
+        <area id="wall2"    class="front" shape="poly" alt="" title="" data-area="wall2,room" coords="957,849,957,601,950,608,657,514,659,752" href="#" target="" />
+        <area id="kitchen"  class="front" shape="poly" alt="" title="" data-area="kitchen,room" coords="958,870,377,1058,118,975,118,1268,387,1356,958,1169" href="#" target="" />
+        <area id="livingroom" class="front" shape="poly" alt="" title="" data-area="livingroom,room" coords="975,1174,1227,1256,1859,1051,1857,759,1232,961,975,875" href="#" target="" />
+        <area id="cellar1"  class="front" shape="poly" alt="" title="" data-area="cellar1,room" coords="1072,1487,1231,1536,1567,1427,1566,1168,1071,1329,1071,1351" href="#" target="" />
+        <area id="cellar2"  class="front" shape="poly" alt="" title="" data-area="cellar2,room" coords="1590,1422,1858,1334,1857,1075,1589,1162" href="#" target="" />
+        <area id="car"      class="front" shape="poly" alt="" title="" data-area="car,room" coords="2467,1050,2194,1138,1899,1040,1899,742,2166,657,2464,738,2464,862" href="#" target="" />
+        <area id="pipes"    class="front" shape="poly" alt="" title="" data-area="pipes,room" coords="1896,1341,1592,1439,1593,1589,1897,1477" href="#" target="" />
+
+        <!-- area div's to blocking the later buttons which aren't behind the room areas  -->
+
+        <area id="blocker" class="front" shape="circle" alt="" title="" data-area="blocker" coords="732,239,17" nohref target="" />
+        <area id="blocker" class="front" shape="circle" alt="" title=""data-area="blocker" coords="1810,239,17" nohref target="" />
+
+        <!-- area div's for buttons to open text -->
+
+        <area id="Oekostrom" class="fancybox" shape="circle" alt="" title="Ökostrom" data-area="p1,roof_p,point" coords="732,239,16" href="content/Oekostrom.html" target="" />
+        <area id="Photovoltaik" class="fancybox" shape="circle" alt="" title="Photovoltaik" data-area="p2,roof_p,point" coords="913,311,16" href="content/Photovoltaik.html" target="" />
+        <area id="Solarthermie" class="fancybox" shape="circle" alt="" title="Solarthermie" data-area="p3,roof_p,point" coords="1024,367,16" href="content/Solarthermie.html" target="" />
+
+        <area id="Unterhaltungselektronik" class="fancybox" shape="circle" alt="" title="Unterhaltungselektronik" data-area="p4,loft_p,point" coords="1232,527,16" href="content/Unterhaltungselektronik.html" target="" />
+        <area id="Wohnungsraumbelueftung" class="fancybox" shape="circle" alt="" title="Wohnungsraumbelüftung" data-area="p5,loft_p,point" coords="1588,411,16" href="content/Wohnungsraumbelueftung.html" target="" />
+        <area id="Daemmung_Dach" class="fancybox" shape="circle" alt="" title="Wärmedämmung im Dachgeschoss" data-area="p6,loft_p,point" coords="1670,312,16" href="content/Daemmung_Dach.html" target="" />
+        <area id="Erdgasheizung" class="fancybox" shape="circle" alt="" title="Erdgasheizung" data-area="p7,loft_p,point" coords="1810,239,16" href="content/Erdgasheizung.html" target="" />
+
+        <area id="Thermografie" class="fancybox" shape="circle" alt="" title="Thermografie" data-area="p8,wall1_p,point" coords="1852,494,16" href="content/Thermografie.html" target="" />
+        <area id="Waermeschutzverglasung" class="fancybox" shape="circle" alt="" title="Wärmeschutzverglasung" data-area="p9,wall1_p,point" coords="1702,669,16" href="content/Waermeschutzverglasung.html" target="" />
+
+        <area id="Daemmung_Wand" class="fancybox" shape="circle" alt="" title="Wärmedämmung an Außenwänden" data-area="p10,bathroom_p,point" coords="1567,643,16" href="content/Daemmung_Wand.html" target="" />
+        <area id="Trinkwasser1" class="fancybox" shape="circle" alt="" title="Trinkwasser" data-area="p11,bathroom_p,point" coords="1152,722,16" href="content/Trinkwasser1.html" target="" />
+
+        <area id="Waermeschutzverglasung" class="fancybox" shape="circle" alt="" title="Wärmeschutzverglasung" data-area="p12,wall2_p,point" coords="810,669,16" href="content/Waermeschutzverglasung.html" target="" />
+
+        <area id="Schimmel" class="fancybox" shape="circle" alt="" title="Schimmel" data-area="p13,kitchen_p,point" coords="163,1032,16" href="content/Schimmel.html" target="" />
+        <area id="Kochen" class="fancybox" shape="circle" alt="" title="Kochen" data-area="p14,kitchen_p,point" coords="297,1200,16" href="content/Kochen.html" target="" />
+        <area id="Kaffeemaschiene" class="fancybox" shape="circle" alt="" title="Kaffeemaschiene" data-area="p15,kitchen_p,point" coords="519,1045,16" href="content/Kaffeemaschiene.html" target="" />
+        <area id="Kuehlen" class="fancybox" shape="circle" alt="" title="Kühlen / Gefrieren" data-area="p16,kitchen_p,point" coords="860,1096,16" href="content/Kuehlen.html" target="" />
+
+        <area id="Aquarium" shape="circle" class="fancybox" alt="" title="Aquarium" data-area="p17,livingroom_p,point" coords="1246,1057,16" href="content/Aquarium.html" target="" />
+        <area id="Heizflaechen" class="fancybox" shape="circle" alt="" title="Heizflächen" data-area="p18,livingroom_p,point" coords="1314,1159,16" href="content/Heizflaechen.html" target="" />
+        <area id="Unterhaltungselektronik" class="fancybox" shape="circle" alt="" title="Unterhaltungselektronik" data-area="p19,livingroom_p,point" coords="1610,1070,16" href="content/Unterhaltungselektronik.html" target="" />
+        <area id="Beleuchtung" class="fancybox" shape="circle" alt="" title="Beleuchtung" data-area="p20,livingroom_p,point" coords="1481,983,16" href="content/Beleuchtung.html" target="" />
+
+        <area id="Erdgasauto" class="fancybox" shape="circle" alt="" title="Erdgasauto" data-area="p21,car_p,point" coords="2149,939,16" href="content/Erdgasauto.html" target="" />
+
+        <area id="Warmwasser" class="fancybox" shape="circle" alt="" title="Erdgasheizung / Warmwasseraufbereitung" data-area="p22,cellar2_p,point" coords="1673,1234,16" href="content/Warmwasser.html" target="" />
+
+        <area id="Zaehler" class="fancybox" shape="circle" alt="" title="Zähler" data-area="p23,cellar1_p,point" coords="1499,1276,16" href="content/Zaehler.html" target="" />
+        <area id="Waermepumpe" class="fancybox" shape="circle" alt="" title="Wärmepumpe" data-area="p24,cellar1_p,point" coords="1461,1364,16" href="content/Waermepumpe.html" target="" />
+        <area id="Waschen" class="fancybox" shape="circle" alt="" title="Waschen / Trocknen" data-area="p25,cellar1_p,point" coords="1207,1434,16" href="content/Waschen.html" target="" />
+
+        <area id="Fernwaerme" class="fancybox" shape="circle" alt="" title="Fernwärme" data-area="p26,pipes_p,point" coords="1763,1415,16" href="content/Fernwaerme.html" target="" />
+        <area id="Trinkwasser2" class="fancybox" shape="circle" alt="" title="Trinkwasser" data-area="p27,pipes_p,point" coords="1727,1434,16" href="content/Trinkwasser2.html" target="" />
+        <area id="Erdgas" class="fancybox" shape="circle" alt="" title="Erdgas" data-area="p28,pipes_p,point" coords="1698,1459,16" href="content/Erdgas.html" target="" />
+        
+
+    </map>
+
+    <div id="image_container">
+        <img id="Energiehaus" src="images/Energiehaus_Bild.jpg" border="0" alt="" title="" usemap="#Energiehaus_map" />
+
+        <button id="backButton" style="visibility:hidden;"><strong>Zur&uuml;ck</strong></button>
+    </div>
+    
+    <br />
+    <a id="impressum" href="Impressum.html">Impressum</a>
+   
+
+
+</body>
+</html>
